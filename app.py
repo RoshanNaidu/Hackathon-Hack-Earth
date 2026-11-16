@@ -159,7 +159,7 @@ def warn(msg):
 # ---------------------------
 # Sidebar: Data & Settings
 # ---------------------------
-st.title("🏗️ Energy Efficiency Model Lab (Interactive)")
+st.title("Energy Efficiency Model Lab")
 
 with st.sidebar:
     st.header("1) Data")
@@ -218,7 +218,7 @@ with st.sidebar:
     track_emissions = st.checkbox("Track energy with CodeCarbon (if installed)", value=True)
 
     st.header("5) Run")
-    go = st.button("🚀 Train & Compare")
+    go = st.button("Train & Compare!")
 
 # ---------------------------
 # Data checks & preprocessing
@@ -359,7 +359,7 @@ if go:
             # ---------------------------
             # Results Table
             # ---------------------------
-            st.subheader("📊 Comparative Results")
+            st.subheader("Comparative Results")
             if task == "Regression":
                 order_col = "R2"
                 df_res = pd.DataFrame([
@@ -380,7 +380,7 @@ if go:
             # ---------------------------
             # Diagnostics
             # ---------------------------
-            st.subheader("🩺 Diagnostics")
+            st.subheader("Diagnostics")
 
             colA, colB = st.columns(2)
 
@@ -436,7 +436,7 @@ if go:
             # ---------------------------
             # Scenario: What-If Prediction
             # ---------------------------
-            st.subheader("🧪 Scenario Tester (What-If)")
+            st.subheader("Scenario Tester (What-If)")
 
             # Prepare slider ranges from train data
             def range_for(col, pad=0.05):
